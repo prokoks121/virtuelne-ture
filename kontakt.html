@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html data-scroll="10">
+  <head>
+    <meta charset="utf-8">
+<meta id="vp" name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtuelne Ture 360</title>
+<script>
+window.onload = function() {
+    if (screen.width < 1080) {
+        var mvp = document.getElementById('vp');
+        mvp.setAttribute('content','user-scalable=no,width=550');
+    }
+}
+</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/093df5f115.js" crossorigin="anonymous"></script>
+<link rel="icon" href="/icon.png">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/jquery.visible.min.js"></script>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    
+         <link href="/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+
+    <div class="content_1">
+      <div class="nav_bar">
+  <div>
+    <img class="mini_logo" src="/mini_logo.png">
+    <div class="nav_bar_div">
+            <div ><a href="/" id="prelaz_11">početna</a></div>
+      <div ><a href="/">panorama</a></div>
+      <div ><a href="#">kontakt</a></div>
+
+    </div>
+  </div>
+</div>
+<div class="div_9">
+  <div class="div_posicija">
+  <div class="div_10">
+    <h2 class="kontakt_h2">Kontaktirajte nas</h2>
+    <h3 class="kontakt_h3">Imate pitanje? Popunite formular ispod i odgovorićemo vam u najkraćem mogućem roku.</h3>
+    <form method="post">
+      <div class="kontakt_div">
+        <input type="text" name="c_ime" placeholder="Naziv firme">
+                <input type="text" name="m_ime" placeholder="Vaše ime">
+                <input type="text" name="br_tel" placeholder="Broj telefona">
+                        <input type="email" name="mail" placeholder="Vaša email adresa">
+                               <textarea name="poruka" placeholder="Poruka"></textarea>
+<button>Pošalji</button>
+
+ 
+
+      </div>
+      
+    </form>
+  </div>
+  <div class="horisontalna_linija"> <div class="horisontalna_linija_1"></div></div>
+  <div class="kontakt_div_img">
+
+<div class="img_kont_div"><p><span>Email:</span> example@gmail.com</p>
+<p><span>Broj telefona:</span> 065/123123123</p></div>
+    <img id="cog" width="500px;" height="500px;" src="/planet.png"></div>
+</div>
+    </div>
+</div>
+<div class="footer_1">
+    
+  <img  height="40px"  class="logo_img_footer" src="/logo.png">
+</div>
+<script type="text/javascript">
+  device_width = $( window ).width();
+      device_height = $( window ).height();
+content_he = device_height-50;
+$('.content_1').css({"min-height":content_he});
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta id="vp" name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtuelne Ture 360</title>
+<script>
+window.onload = function() {
+    if (screen.width < 1080) {
+        var mvp = document.getElementById('vp');
+        mvp.setAttribute('content','user-scalable=no,width=550');
+    }
+}
+</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/093df5f115.js" crossorigin="anonymous"></script>
+<link rel="icon" href="/icon.png">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/jquery.visible.min.js"></script>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <script type="text/javascript">
+      const debounce = (fn) => {
+
+  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+  let frame;
+
+  // The debounce function returns a new function that can receive a variable number of arguments
+  return (...params) => {
+    
+    // If the frame variable has been defined, clear it now, and queue for next frame
+    if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+
+    // Queue our function call for the next frame
+    frame = requestAnimationFrame(() => {
+      
+      // Call our function and pass any params we received
+      fn(...params);
+    });
+
+  } 
+};
+
+
+// Reads out the scroll position and stores it in the data attribute
+// so we can use it in our stylesheets
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+
+// Listen for new scroll events, here we debounce our `storeScroll` function
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+// Update scroll position for first time
+storeScroll();
+    </script>
+         <link href="/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+
+    <script src="three.min.js"></script>
+    <script src="panolens.min.js"></script>
+    <div class="content">
+      <div class="nav_bar">
+  <div>
+    <img class="mini_logo" src="/mini_logo.png">
+    <div class="nav_bar_div">
+            <div ><a href="#" id="prelaz_11">usluge</a></div>
+      <div ><a href="#">panorama</a></div>
+      <div ><a href="/kontakt.html">kontakt</a></div>
+
+    </div>
+  </div>
+</div>
+    <div class="top_page">
+         <div class="x-izlaz">x</div>
+
+      <div class="panolen" id="panolens">
+      </div>
+         <div class="zatamljivanje360">
+          <div class="logo_div">
+            <h1 class="h1_ture">VIRTUELNE </br> TURE</h1>
+                        <img     width="450px;" class="logo_img" src="/logo.png">
+
+            <div class="isprobaj">PROBAJ</div>
+          </div>
+</div>
+</div>
+<div class="prelaz"></div>
+<div class="bar_2">
+  <div class="bar_23"><img class="bar_2_12" src="/bg-camera-half.png"><div id="visibility_1"></div></div>
+  <div style="display: inline-flex;
+    z-index: 99;
+    width: 100%;">
+    <div class="div_1"><h2 class="central_h2">Virtuelna<span style="color: white;"> stvarnost je naša</span> realnost !</h2>
+      <p class="p_1">Virtualizacija prostora omogućava interaktivno prezentovanje sadržaja korisniku radi sticanja potpuno jedinstvenog iskustva.  Korisnik se može “kretati“ u virtuelnom prostoru i može se osećati kao da se nalazi u samom događaju dok posmatra realan svet. Virtualizacija prostora se postiže pomoću 360° videa i panoramskih fotografija. </p></div>
+  </div>
+ <div class="div_2" >
+    <div  class="div_3">
+    <div class="div_4">
+    <div class="div_5" ><h3><span style="color: white;">Šta je</span> virtuelna tura ?</h3><p >Virtuelna tura predstavlja skup panoramskih fotogarfija koje pokazuju unutrašnji i spoljašni prostor tako da posmatrač može virtuelno da “prošeta” u svim pravcima kroz određeni ambijent. Panoramske fotografije jesu neprekidne slike od 360°. Svaka virtuelna tura može biti obogaćena video snimcima, fotogarfijama, 3D modelima i dodatnim sadržajem o lokaciji koji se mogu pogledati na različitim platformama kao sto su računari, mobilni uređaji, tableti i VR naočare.</p></div>
+    <img src="/planet.png" >
+</div>
+<div class="div_6" ><h3 ><span style="color: white;">Šta je</span> 360 video ?</h3><p >360 video je sferni video format za prikazivanje virtuelne stvarnostiu u 2D ili 3D. Napravljen je sa kamerama koje snimaju u svim pravcima tako da posmatrač može da se kreće i menja ugao gledanja videa. Ukoliko se prikazuje na mobilnim uređajima, video je moguće rotirati prostim okretanjem i naginjanjem uređaja na stranu. Najbolje 360 virtuelno iskustvo se dobija korišćenjem VR naočara, koje posmatraču pružaju iluziju da se nalazi u centru događaja. Format 360 video podržavaju Youtube i Facebook.</p></div>
+<div class="div_7" >
+   <img src="/pc.png" >
+      <div class="div_8" ><h3><span style="color: white;">Zašto koristiti</span> virtuelne ture ?</h3><p>Snaga interneta je interaktivnost. Virtuelne ture korisniku daju kontrolu. Aktivno je, a ne pasivno. Gledajući sve u svim pravcima daje dodani stepen kredibiliteta. Zahvaljujući tome korisnici se bolje upoznaju i informišu sa Vašom ponudom. Virtuelna tura ne samo da će poboljšati Vašu internet stranicu već će i Vaše poslovanje prikazati u najboljem svetlu.</p></div>
+     
+  </div>
+</div>
+</div>
+</div>
+<div class="prelaz" id="prelaz_1"></div>
+<div class="slide_2">
+  <div class="slide_2_div1">
+  <h3>ŠTA VAM NUDIMO?</h3>
+  <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-video"></i>
+    <h4 class="slide_2_h4">SFERNI </br> VIDEO</h4>
+    <p class="slide_2_p">Izrada 360° video materijala</p>
+  </div>
+    <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-camera"></i>
+    <h4 class="slide_2_h4">Sferna fotografija</h4>
+    <p class="slide_2_p">Izrada 360° panoramskih fotografija</p>
+  </div>
+    <div class="slide_2_div2">
+    <i class=" slide_2_i fa fa-chevron-circle-up "></i>
+    <h4 class="slide_2_h4">Virtuelna šetnja</h4>
+    <p class="slide_2_p">Virtuelna šetnja kroz objekat</p>
+  </div>
+   <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-street-view"></i>
+  
+        
+   <h4 class="slide_2_h4"><span style="    text-transform: uppercase;
+    color: #4285f4;
+">G</span><span style="
+    color: #ea4335;
+">o</span><span style="
+    color: #fbbc05;
+">o</span><span style="
+    color: #4285f4;
+">g</span><span style="
+    color: #34a853;
+">l</span><span style="
+    color: #ea4335;
+">e</span> <br>Street View</h4>
+    <p class="slide_2_p">Vaša virtuelna tura na Google</p>
+  </div>
+    <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-sync-alt"></i>
+    <h4 class="slide_2_h4">360°</br> objekti</h4>
+    <p class="slide_2_p">Virtuelni objekati koje je moguće okretati</p>
+  </div>
+      <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-car"></i>
+    <h4 class="slide_2_h4">360° automobili</h4>
+    <p class="slide_2_p">Izrada 360° panoramskih snimaka enterijera automobila</p>
+  </div>
+    <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-dice-d6"></i>
+    <h4 class="slide_2_h4">3D modeli</h4>
+    <p class="slide_2_p">Izrada 3D modela objekata pogodnih za 3D štampu</p>
+  </div>
+   
+    <div class="slide_2_div2">
+    <i class=" slide_2_i fas fa-globe"></i>
+    <h4 class="slide_2_h4">Izrada web </br> stranica</h4>
+    <p class="slide_2_p">Izrada interaktivnih web stranica</p>
+  </div>
+    
+</div>
+</div>
+  <div class="prelaz"></div>
+
+</div>
+<div class="footer">
+    
+  <img height="50px"  class="logo_img_footer" src="/logo.png">
+</div>
+ <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>

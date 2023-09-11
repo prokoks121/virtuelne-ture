@@ -105,13 +105,13 @@ $(function () {
     }
 
     function getContactFromStorage(){
-        // try {
+        try {
             let contact = JSON.parse(localStorage.getItem(FORM_CONTACT_KEY))
             $("input[name='company-name']").val(contact.companyName)
             $("input[name='full-name']").val(contact.fullName)
             $("input[name='phone-number']").val(contact.phoneNumber)
             $("input[name='email']").val(contact.email)
             $("textarea[name='message']").val(contact.message)
-        // }catch (e) {}
+        }catch (e) {}
     }
 });

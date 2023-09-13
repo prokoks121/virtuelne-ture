@@ -29,9 +29,9 @@ $(function () {
 
     getContactFromStorage();
 
-    $("#submit-button").on('click',function () {
-        storeContactInformation();
-    });
+    // $("#submit-button").on('click',function () {
+    //     storeContactInformation();
+    // });
 
     viewer.addUpdateCallback(function () {
         if (!isRotationEnabled) {
@@ -74,6 +74,24 @@ $(function () {
         }, 1500);
     });
 
+    $("#contact-form").submit(function (e) {
+        e.preventDefault();
+        let form = $(this);
+        let url = "php/contact.php"
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr)
+                console.log(thrownError)
+            }
+        });
+    });
+
     function showPanorama() {
         isRotationEnabled = true;
         $('.pano-fade').hide();
@@ -93,25 +111,25 @@ $(function () {
         $('.nav_bar').show();
     }
 
-    function storeContactInformation(){
-        const form = {
-            companyName: $("input[name='company-name']").val(),
-            fullName: $("input[name='full-name']").val(),
-            phoneNumber: $("input[name='phone-number']").val(),
-            email: $("input[name='email']").val(),
-            message: $("textarea[name='message']").val()
-        };
-        localStorage.setItem(FORM_CONTACT_KEY, JSON.stringify(form));
+    function storeContactInformation() {
+        // const form = {
+        //     companyName: $("input[name='company-name']").val(),
+        //     fullName: $("input[name='full-name']").val(),
+        //     phoneNumber: $("input[name='phone-number']").val(),
+        //     email: $("input[name='email']").val(),
+        //     message: $("textarea[name='message']").val()
+        // };
+        // localStorage.setItem(FORM_CONTACT_KEY, JSON.stringify(form));
     }
 
-    function getContactFromStorage(){
-        try {
-            let contact = JSON.parse(localStorage.getItem(FORM_CONTACT_KEY))
-            $("input[name='company-name']").val(contact.companyName)
-            $("input[name='full-name']").val(contact.fullName)
-            $("input[name='phone-number']").val(contact.phoneNumber)
-            $("input[name='email']").val(contact.email)
-            $("textarea[name='message']").val(contact.message)
-        }catch (e) {}
+    function getContactFromStorage() {
+        //     try {
+        //         let contact = JSON.parse(localStorage.getItem(FORM_CONTACT_KEY))
+        //         $("input[name='company-name']").val(contact.companyName)
+        //         $("input[name='full-name']").val(contact.fullName)
+        //         $("input[name='phone-number']").val(contact.phoneNumber)
+        //         $("input[name='email']").val(contact.email)
+        //         $("textarea[name='message']").val(contact.message)
+        //     }catch (e) {}
     }
 });

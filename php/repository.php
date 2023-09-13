@@ -1,5 +1,5 @@
 <?php
-include('../config.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/config.php');
 
 function insertContact($companyName, $fullName, $phoneNumber, $email, $message)
 {

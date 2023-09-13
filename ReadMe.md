@@ -15,4 +15,8 @@ Sve ostalo je automatizovano.
 
 ## Github
 
-Projekat mozete naci na [GitHub]().
+Projekat mozete naci na [GitHub](https://github.com/prokoks121/virtuelne-ture/tree/php) na PHP grani.
+
+## Pisanje u fajl
+
+Logika za pisanje u fajl je napisana, ali meni ne radi iz razloga sto ne mogu da dam permisiju da se na lokaciji xampp-a menjaju fajlovi.

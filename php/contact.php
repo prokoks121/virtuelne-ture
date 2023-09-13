@@ -1,5 +1,6 @@
 <?php
 include('repository.php');
+include('store.php');
 try {
     $companyName = $_POST["company-name"];
     $fullName = $_POST["full-name"];
@@ -14,6 +15,7 @@ try {
 
     try {
         insertContact($companyName, $fullName, $phoneNumber, $email, $message);
+        storeLocalAsJson($_POST);
     } catch (Exception $e) {
         echo $e;
         http_response_code(500);
